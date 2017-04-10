@@ -2,16 +2,16 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="50615" started-at="2017-04-10T09:12:33Z" finished-at="2017-04-10T09:13:24Z">
+  <suite name="Default suite" duration-ms="25843" started-at="2017-04-10T10:10:16Z" finished-at="2017-04-10T10:10:42Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="50615" started-at="2017-04-10T09:12:33Z" finished-at="2017-04-10T09:13:24Z">
+    <test name="Default test" duration-ms="25843" started-at="2017-04-10T10:10:16Z" finished-at="2017-04-10T10:10:42Z">
       <class name="NewTest">
-        <test-method status="PASS" signature="Setup()[pri:0, instance:NewTest@28d25987]" name="Setup" is-config="true" duration-ms="6512" started-at="2017-04-10T12:12:33Z" finished-at="2017-04-10T12:12:40Z">
+        <test-method status="PASS" signature="Setup()[pri:0, instance:NewTest@28d25987]" name="Setup" is-config="true" duration-ms="5670" started-at="2017-04-10T13:10:16Z" finished-at="2017-04-10T13:10:22Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Setup -->
-        <test-method status="PASS" signature="SimpleTest()[pri:0, instance:NewTest@28d25987]" name="SimpleTest" duration-ms="44085" started-at="2017-04-10T12:12:40Z" finished-at="2017-04-10T12:13:24Z">
+        <test-method status="PASS" signature="SimpleTest()[pri:0, instance:NewTest@28d25987]" name="SimpleTest" duration-ms="20144" started-at="2017-04-10T13:10:22Z" finished-at="2017-04-10T13:10:42Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- SimpleTest -->
