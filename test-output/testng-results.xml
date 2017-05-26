@@ -2,6 +2,7 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
+<<<<<<< HEAD
   <suite name="Default suite" duration-ms="19762" started-at="2017-04-17T05:51:00Z" finished-at="2017-04-17T05:51:20Z">
     <groups>
     </groups>
@@ -12,6 +13,18 @@
           </reporter-output>
         </test-method> <!-- Setup -->
         <test-method status="PASS" signature="SimpleTest()[pri:0, instance:NewTest@66a3ffec]" name="SimpleTest" duration-ms="16415" started-at="2017-04-17T08:51:03Z" finished-at="2017-04-17T08:51:20Z">
+=======
+  <suite name="Default suite" duration-ms="25132" started-at="2017-04-10T10:51:34Z" finished-at="2017-04-10T10:52:00Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="25132" started-at="2017-04-10T10:51:34Z" finished-at="2017-04-10T10:52:00Z">
+      <class name="NewTest">
+        <test-method status="PASS" signature="Setup()[pri:0, instance:NewTest@3e6fa38a]" name="Setup" is-config="true" duration-ms="5472" started-at="2017-04-10T13:51:34Z" finished-at="2017-04-10T13:51:40Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Setup -->
+        <test-method status="PASS" signature="SimpleTest()[pri:0, instance:NewTest@3e6fa38a]" name="SimpleTest" duration-ms="19643" started-at="2017-04-10T13:51:40Z" finished-at="2017-04-10T13:52:00Z">
+>>>>>>> c34afa1f3038dab3d4b6fddfa73ef5e340d6c800
           <reporter-output>
           </reporter-output>
         </test-method> <!-- SimpleTest -->

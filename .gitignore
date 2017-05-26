@@ -8,5 +8,20 @@ test-output/old/Default suite/methods-alphabetical.html
 test-output/old/Default suite/methods.html
 test-output/testng-results.xml
 
+<<<<<<< HEAD
 /test-output/
+*.html
+=======
+D:/Users/netan/eclipse/Husband_finder/.classhpath
+D:/Users/netan/eclipse/Husband_finder/test-output/Default suite/Default test.html
+D:/Users/netan/eclipse/Husband_finder/test-output/Default suite/Default test.xml
+D:/Users/netan/eclipse/Husband_finder/test-output/emailable-report.html
+D:/Users/netan/eclipse/Husband_finder/test-output/index.html
+D:/Users/netan/eclipse/Husband_finder/test-output/junitreports/TEST-NewTest.xml
+D:/Users/netan/eclipse/Husband_finder/test-output/old/Default suite/methods-alphabetical.html
+D:/Users/netan/eclipse/Husband_finder/test-output/old/Default suite/methods.html
+D:/Users/netan/eclipse/Husband_finder/test-output/testng-results.xml
+
+D:/Users/netan/eclipse/Husband_finder/test-output
+>>>>>>> c34afa1f3038dab3d4b6fddfa73ef5e340d6c800
 *.html
