@@ -8,3 +8,5 @@ test-output/old/Default suite/methods-alphabetical.html
 test-output/old/Default suite/methods.html
 test-output/testng-results.xml
 
+/test-output/
+*.html
