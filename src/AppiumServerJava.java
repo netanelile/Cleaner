@@ -6,6 +6,13 @@ import org.apache.commons.exec.DefaultExecutor;
 public class AppiumServerJava {
 	
 	public void startServer() {
+//		try {
+//			System.out.println("Close old Appium session if exits");
+//			stopServer();
+//		} catch (Exception e1) {
+//			
+//			e1.printStackTrace();
+//		}
 		System.out.println("Start Appium Server");
 		CommandLine cmd = new CommandLine("C:\\Program Files (x86)\\Appium\\node.exe");
 		cmd.addArgument("C:\\Program Files (x86)\\Appium\\node_modules\\appium\\bin\\Appium.js");
@@ -20,6 +27,7 @@ public class AppiumServerJava {
 		try {
 			executor.execute(cmd, handler);
 			Thread.sleep(10000);
+			Runtime.getRuntime().exec("taskkill /f /im cmd.exe") ;
 		} catch (IOException | InterruptedException e) {
 			e.printStackTrace();
 		}
@@ -30,6 +38,7 @@ public class AppiumServerJava {
 		Runtime runtime = Runtime.getRuntime();
 		try {
 			runtime.exec("taskkill /F /IM node.exe");
+			Runtime.getRuntime().exec("taskkill /f /im cmd.exe") ;
 		} catch (IOException e) {
 			e.printStackTrace();
 		}

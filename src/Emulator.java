@@ -9,6 +9,7 @@ public class Emulator {
 		try {
 			runtime.exec("cmd.exe /c start cmd.exe /k \"C:\\ProgramData\\BlueStacksGameManager\\BlueStacks.exe");
 			Thread.sleep(10000);
+			Runtime.getRuntime().exec("taskkill /f /im cmd.exe") ;
 		} catch (IOException | InterruptedException e) {
 			e.printStackTrace();
 		}
@@ -19,6 +20,7 @@ public class Emulator {
 		Runtime runtime = Runtime.getRuntime();
 		try {
 			runtime.exec("taskkill /F /IM BlueStacks.exe");
+			Runtime.getRuntime().exec("taskkill /f /im cmd.exe") ;
 		} catch (IOException e) {
 			e.printStackTrace();
 		}

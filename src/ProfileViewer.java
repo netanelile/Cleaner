@@ -1,8 +1,12 @@
+import java.util.List;
+
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.server.handler.interactions.touch.Scroll;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.seleniumhq.jetty9.util.log.Log;
 
 import io.appium.java_client.ScrollsTo;
 import io.appium.java_client.android.AndroidDriver;
@@ -13,46 +17,64 @@ public class ProfileViewer {
 // Goes throe a profile and check maching parameters and assert if they are exists.
 // if parameter does not match, user will be blocked
 
-	private WebDriver driver;
-
-	public ProfileViewer(AndroidDriver<WebElement> driver) {
+	public ProfileViewer(AndroidDriver<WebElement> driver){
 		PageFactory.initElements(new AppiumFieldDecorator(driver), this);
+		this.driver = driver;
 	}
-
+	AndroidDriver<WebElement> driver;
+	
 	@AndroidFindBy(id = "com.cyberserve.android.atraf:id/menuButton")
 	public WebElement _backButton;
 	@AndroidFindBy (uiAutomator = "UiSelector().description(\"Link\")")
 	public WebElement _removeTracks;
 	
-	@AndroidFindBy (uiAutomator = "UiSelector().description(\"Hide & Block Link\")")
+	@AndroidFindBy (uiAutomator = "UiSelector().description(\"חסום והסתר Link\")")
 	public WebElement _block;
 	
-	@AndroidFindBy (uiAutomator = "UiSelector().description(\"Status:Single\")")
+	@AndroidFindBy (uiAutomator = "UiSelector().description(\"סטטוס:רווק\")")
 	public WebElement _status_Single;
 	
-	@AndroidFindBy (uiAutomator = "UiSelector().description(\"Hair:black\")")
-	public WebElement _hair_Black;
+	@AndroidFindBy (uiAutomator = "UiSelector().description(\"שיער:שטני\")")
+	public WebElement _hair_Shateni;
 	
-	@AndroidFindBy (uiAutomator = "UiSelector().description(\"Body Type:Average\")")
+	@AndroidFindBy (uiAutomator = "UiSelector().description(\"מבנה גוף:רגיל\")")
 	public WebElement _bodyType_Average;
 	
-	@AndroidFindBy (uiAutomator = "UiSelector().description(\"Eye color:brown\")")
+	@AndroidFindBy (uiAutomator = "UiSelector().description(\"עיניים:חומות\")")
 	public WebElement _EyeColor_brown;
 	
-	@AndroidFindBy (uiAutomator = "UiSelector().description(\"Religion:Jewish\")")
+	@AndroidFindBy (uiAutomator = "UiSelector().description(\"סטטוס:רווק\")")
 	public WebElement _religion_Jewish;
 	
 	@AndroidFindBy (uiAutomator = "UiSelector().description(\"chat-Red@2x\")")
 	public WebElement _messageIcon;
 	
-	@AndroidFindBy (uiAutomator = "UiSelector().description(\"Body Hair:None\")")
-	public WebElement _bodyHair_None;
+	@AndroidFindBy (uiAutomator = "UiSelector().description(\"שיער גוף:קצת\")")
+	public WebElement _bodyHair_Some;
 	
-	@AndroidFindBy (uiAutomator = "UiSelector().description(\"Body Type:Defined\")")
-	public WebElement _bodyType_Defined;
 	
 	@AndroidFindBy (uiAutomator = "UiSelector().description(\"+\")")
 	public WebElement _plusIcon;
+	
+	@AndroidFindBy (uiAutomator = "UiSelector().description(\"חסום\")")
+			public WebElement _approuveBlockMessage;
+	
+	@AndroidFindBy (uiAutomator = "UiSelector().description(\"הוסף פיבוריט Link\")")
+	public WebElement _addToFavorits;
+	
+	@AndroidFindBy (xpath = ("//android.view.View@index='1']"))
+	public WebElement _importantIfno;
+	
+	@AndroidFindBy(xpath = ("//android.view.View[contains(@content-desc,'38')]"))
+	public WebElement _userinfo;
+	
+	public void clickOnUser(int index)throws InterruptedException{
+		List <WebElement> usersLis = driver.findElementsByClassName("android.widget.RelativeLayout");
+		System.out.println("Clicking on user number " + index);
+		usersLis.get(index).click();
+		Thread.sleep(1500);
+	}
+	
 	
 	public void clickBack(){
 		_backButton.click();
@@ -61,6 +83,12 @@ public class ProfileViewer {
 		
 	}
 	
+	public void getUserInfo() {
+//		List <WebElement> usersLis = driver.findElementsByClassName("android.view.View");
+		System.out.println("User Info: " + _userinfo.getAttribute("contentDescription"));
+		
+		
+	}
 	public void clickBlockButton(){
 		
 	}

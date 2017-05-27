@@ -1,30 +1,89 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="1" passed="1">
+<testng-results skipped="0" failed="1" ignored="0" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-<<<<<<< HEAD
-  <suite name="Default suite" duration-ms="19762" started-at="2017-04-17T05:51:00Z" finished-at="2017-04-17T05:51:20Z">
+  <suite name="Default suite" duration-ms="20948" started-at="2017-05-27T11:13:14Z" finished-at="2017-05-27T11:13:35Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="19762" started-at="2017-04-17T05:51:00Z" finished-at="2017-04-17T05:51:20Z">
+    <test name="Default test" duration-ms="20948" started-at="2017-05-27T11:13:14Z" finished-at="2017-05-27T11:13:35Z">
       <class name="NewTest">
-        <test-method status="PASS" signature="Setup()[pri:0, instance:NewTest@66a3ffec]" name="Setup" is-config="true" duration-ms="3335" started-at="2017-04-17T08:51:00Z" finished-at="2017-04-17T08:51:03Z">
+        <test-method status="PASS" signature="Setup()[pri:0, instance:NewTest@754ba872]" name="Setup" is-config="true" duration-ms="2915" started-at="2017-05-27T14:13:14Z" finished-at="2017-05-27T14:13:17Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Setup -->
-        <test-method status="PASS" signature="SimpleTest()[pri:0, instance:NewTest@66a3ffec]" name="SimpleTest" duration-ms="16415" started-at="2017-04-17T08:51:03Z" finished-at="2017-04-17T08:51:20Z">
-=======
-  <suite name="Default suite" duration-ms="25132" started-at="2017-04-10T10:51:34Z" finished-at="2017-04-10T10:52:00Z">
-    <groups>
-    </groups>
-    <test name="Default test" duration-ms="25132" started-at="2017-04-10T10:51:34Z" finished-at="2017-04-10T10:52:00Z">
-      <class name="NewTest">
-        <test-method status="PASS" signature="Setup()[pri:0, instance:NewTest@3e6fa38a]" name="Setup" is-config="true" duration-ms="5472" started-at="2017-04-10T13:51:34Z" finished-at="2017-04-10T13:51:40Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Setup -->
-        <test-method status="PASS" signature="SimpleTest()[pri:0, instance:NewTest@3e6fa38a]" name="SimpleTest" duration-ms="19643" started-at="2017-04-10T13:51:40Z" finished-at="2017-04-10T13:52:00Z">
->>>>>>> c34afa1f3038dab3d4b6fddfa73ef5e340d6c800
+        <test-method status="FAIL" signature="SimpleTest()[pri:0, instance:NewTest@754ba872]" name="SimpleTest" duration-ms="18015" started-at="2017-05-27T14:13:17Z" finished-at="2017-05-27T14:13:35Z">
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 20 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.53.0', revision: '35ae25b', time: '2016-03-15 16:57:40'
+System info: host: 'NetanelPC', ip: '192.168.1.118', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_111'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities [{appPackage=com.cyberserve.android.atraf, networkConnectionEnabled=true, warnings={}, appWaitActivity=com.cyberserve.android.atraf.AtrafMain, databaseEnabled=false, deviceName=emulator-5554, platform=LINUX, appActivity=com.cyberserve.android.atraf.AtrafMain, desired={appPackage=com.cyberserve.android.atraf, appActivity=com.cyberserve.android.atraf.AtrafMain, newCommandTimeout=600, appWaitActivity=com.cyberserve.android.atraf.AtrafMain, platformName=Android, deviceName=Android Emulator}, newCommandTimeout=600, platformVersion=4.4.2, webStorageEnabled=false, locationContextEnabled=false, browserName=Android, takesScreenshot=true, javascriptEnabled=true, platformName=Android}]
+Session ID: b375eaea-a300-4f50-a158-8ad67d4e130a]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 20 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.53.0', revision: '35ae25b', time: '2016-03-15 16:57:40'
+System info: host: 'NetanelPC', ip: '192.168.1.118', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_111'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities [{appPackage=com.cyberserve.android.atraf, networkConnectionEnabled=true, warnings={}, appWaitActivity=com.cyberserve.android.atraf.AtrafMain, databaseEnabled=false, deviceName=emulator-5554, platform=LINUX, appActivity=com.cyberserve.android.atraf.AtrafMain, desired={appPackage=com.cyberserve.android.atraf, appActivity=com.cyberserve.android.atraf.AtrafMain, newCommandTimeout=600, appWaitActivity=com.cyberserve.android.atraf.AtrafMain, platformName=Android, deviceName=Android Emulator}, newCommandTimeout=600, platformVersion=4.4.2, webStorageEnabled=false, locationContextEnabled=false, browserName=Android, takesScreenshot=true, javascriptEnabled=true, platformName=Android}]
+Session ID: b375eaea-a300-4f50-a158-8ad67d4e130a
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:40)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:327)
+	at io.appium.java_client.DefaultGenericMobileElement.execute(DefaultGenericMobileElement.java:33)
+	at io.appium.java_client.MobileElement.execute(MobileElement.java:1)
+	at io.appium.java_client.android.AndroidElement.execute(AndroidElement.java:1)
+	at org.openqa.selenium.remote.RemoteWebElement.getAttribute(RemoteWebElement.java:150)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at io.appium.java_client.pagefactory.ElementInterceptor.getObject(ElementInterceptor.java:39)
+	at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.intercept(InterceptorOfASingleElement.java:58)
+	at io.appium.java_client.android.AndroidElement$$EnhancerByCGLIB$$6369565b.getAttribute(<generated>)
+	at ProfileViewer.getUserInfo(ProfileViewer.java:88)
+	at NewTest.SimpleTest(NewTest.java:57)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:851)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1177)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:756)
+	at org.testng.TestRunner.run(TestRunner.java:610)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:382)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1293)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1218)
+	at org.testng.TestNG.runSuites(TestNG.java:1133)
+	at org.testng.TestNG.run(TestNG.java:1104)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- SimpleTest -->

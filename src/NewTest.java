@@ -21,11 +21,11 @@ public class NewTest {
 	 
 		@BeforeClass
 		public void Setup() throws MalformedURLException{
-			Emulator emulator = new Emulator();
-			
-			emulator.startEmulator();
-			AppiumServerJava appiumServer = new AppiumServerJava();
-			appiumServer.startServer();
+//			Emulator emulator = new Emulator();
+//			
+//			emulator.startEmulator();
+//			AppiumServerJava appiumServer = new AppiumServerJava();
+//			appiumServer.startServer();
 			
 			DesiredCapabilities cap = new DesiredCapabilities();
 
@@ -46,11 +46,15 @@ public class NewTest {
 			Thread.sleep(15000);
 			
 			
-			LogIn login = new LogIn(driver);
+//			LogIn login = new LogIn(driver);
 			
 		//	ExplicitWait(login.mapping._username, 1000);
 			
-			login.logIn("PersonNewPerson", "qwe123qwe");
+//			login.logIn("PersonNewPerson", "qwe123qwe");
+//			login.logIn("NewPerson2", "qwe123qwe");
+			ProfileViewer pv = new ProfileViewer(driver);
+			pv.clickOnUser(0);
+			pv.getUserInfo();
 			
 		}
 		
