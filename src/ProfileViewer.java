@@ -1,13 +1,17 @@
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.remote.server.handler.interactions.touch.Scroll;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import io.appium.java_client.ScrollsTo;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 
 public class ProfileViewer {
+// Goes throe a profile and check maching parameters and assert if they are exists.
+// if parameter does not match, user will be blocked
 
 	private WebDriver driver;
 
@@ -15,7 +19,8 @@ public class ProfileViewer {
 		PageFactory.initElements(new AppiumFieldDecorator(driver), this);
 	}
 
-
+	@AndroidFindBy(id = "com.cyberserve.android.atraf:id/menuButton")
+	public WebElement _backButton;
 	@AndroidFindBy (uiAutomator = "UiSelector().description(\"Link\")")
 	public WebElement _removeTracks;
 	
@@ -49,11 +54,75 @@ public class ProfileViewer {
 	@AndroidFindBy (uiAutomator = "UiSelector().description(\"+\")")
 	public WebElement _plusIcon;
 	
-	@AndroidFindBy (uiAutomator = "UiSelector().description(\"\")")
-	public WebElement _;
+	public void clickBack(){
+		_backButton.click();
+	}
+	public void scrollToBlockButton(){
+		
+	}
 	
-	@AndroidFindBy (uiAutomator = "UiSelector().description(\"\")")
-	public WebElement _;
+	public void clickBlockButton(){
+		
+	}
 	
+	public void approuveBlockMessage(){
+		
+	}
+	
+	public void scrollToRemoveTracks(){
+		
+	}
+	public void removeTracks(){
+		_removeTracks.click();
+		
+	}
+	
+	public void blockUser(){
+		scrollToBlockButton();
+		clickBlockButton();
+		approuveBlockMessage();
+		scrollToRemoveTracks();
+		removeTracks();
+	}
+	
+	public boolean isHairExists(){
+		return true;	
+	}
+	
+	public boolean isBodyTypeExists(){
+		return true;	
+	}
+	public boolean isBodyHairExists(){
+		return true;	
+	}
+	public boolean isEyesExists(){
+		return true;	
+	}
+	
+	public boolean isHairMatch(){
+		return true;	
+	}
+	
+	public boolean isBodyTypeMatch(){
+		return true;	
+	}
+	public boolean isBodyHairMatch(){
+		return true;	
+	}
+	public boolean isEyesMatch(){
+		return true;	
+	}
+	
+	public void clickSendMessage(){
+		
+	}
+	
+	public boolean isFavorit(){
+		return true;
+	}
+	
+	public void AddFavorit(){
+		
+	}
 
 }

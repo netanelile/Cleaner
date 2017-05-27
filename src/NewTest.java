@@ -4,6 +4,8 @@ import io.appium.java_client.remote.MobileCapabilityType;
 import io.appium.java_client.remote.MobilePlatform;
 import java.net.MalformedURLException;
 import java.net.URL;
+
+import org.junit.AfterClass;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -19,6 +21,11 @@ public class NewTest {
 	 
 		@BeforeClass
 		public void Setup() throws MalformedURLException{
+			Emulator emulator = new Emulator();
+			
+			emulator.startEmulator();
+			AppiumServerJava appiumServer = new AppiumServerJava();
+			appiumServer.startServer();
 			
 			DesiredCapabilities cap = new DesiredCapabilities();
 
@@ -47,15 +54,24 @@ public class NewTest {
 			
 		}
 		
+		@AfterClass
+		public void TearDown(){
+			AppiumServerJava appiumServer = new AppiumServerJava();
+			appiumServer.stopServer();
+			
+			Emulator emulator = new Emulator();	 
+			emulator.stopEmulator();
+		}
+		
 		public void ExplicitWait(WebElement element, int duration) {
 			(new WebDriverWait(driver, duration)).until(ExpectedConditions.elementToBeClickable(element));
 		}
 		
 		
 	}
-//TODO: Upload Project to GIT as a new Project
+//TODO: Upload Project to GIT as a new Project V
 //TODO: Open test Profile V
-//TODO: Mapp all the needed elements AND Create Mapping class that works
+//TODO: Mapp all the needed elements
 //TODO: LogIn + Assertions V
 //TODO: Method that gets inside all the profiles in the grid.
 //TODO: Method that check the desired parameters
